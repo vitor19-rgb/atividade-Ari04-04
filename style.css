@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+   
+}
+
+h1 {
+    text-align: center;
+    padding: 5px;
+    
+}
+
+#toda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+
+    .team {
+        background-color: #f9f9f9;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        height: 350px;
+        width: 350px;
+    }
+
+.linha {
+    width: 200px;
+    border: none;
+    border-bottom: 2px solid #686767;
+    outline: none;
+    padding: 5px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: transparent;
+   
+}
+
+.pontos {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    outline: none;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: transparent;
+    
+}
+
+.botao {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.inicio {
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #2889a7;
+    border-radius: 12px;
+    font-size: 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.inicio:hover{
+    background-color:#10aede ;
+}
+
+#final, #ganha, #renicio {
+    background-color: #2889a7;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    margin-top: 25px;
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+#final:hover , #ganha:hover , #renicio:hover{
+    background-color: #10aede;
+}
+#times {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #444;
+}
+#placar{
+    font-size: 40px;
+}
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+   
+    animation: fadeSlide 1s ease-in-out;
+}
+.inicio,
+#final,
+#ganha,
+#renicio {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.inicio:hover,
+#final:hover,
+#ganha:hover,
+#renicio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.linha:focus,
+.pontos:focus {
+    transform: scale(1.03);
+    transition: transform 0.2s ease;
+}
+.container{
+    height: 100%;
+    width: 100%;
+ 
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }
+  
+  .pontos.pulsar {
+    animation: pulse 0.3s ease;
+  }
+  body {
+    background: linear-gradient(-45deg, #d0f0fd, #e0ffe7, #fff2cc, #e8d5f7);
+    animation: gradientBG 15s ease infinite;
+    background-size: 400% 400%;
+  }
+  
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  @media (max-width: 768px) {
+    #toda {
+        flex-direction: column;
+        gap: 20px;
+      }
+    
+      .team {
+        width: 90%;
+        height: auto;
+      }
+    
+      h1, h2, #times {
+        font-size: 25px;
+      }
+    
+      input.linha,
+      input.pontos {
+        width: 50%;
+        font-size: 20px;
+      }
+    
+      #final,
+      #ganha,
+      #renicio {
+        width: 90%;
+        max-width: 300px;
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+  }
+  
